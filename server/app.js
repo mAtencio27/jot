@@ -16,12 +16,18 @@ app.use(cors({
 // Serve static assets
 app.use(express.static(path.resolve(__dirname, "..", "build")));
 
+/*************************************************************************** */
 
 app.get("/api/hello", async(req,res) => {
    res.json("hello this app is jot")
 })
 
+app.get("/api/allnotes", async(req,res) => {
+    const notes = await db.table("notes")
+    res.json(notes)
+})
 
+/*************************************************************************** */
 
 app.get("*", (req, res) => {
     res.sendFile(path.resolve(__dirname, "..", "build", "index.html"));
