@@ -5,27 +5,27 @@ import AllNote from './components/allnote';
 
 function App() {
 
-  const [notes,setNotes] = useState()
+  // const [notes,setNotes] = useState()
 
-  useEffect(() => {
-    const fetchNotes = async() => {
-      const allNotes = await fetch("/api/allnotes");
-      const notesConvert = await allNotes.json();
-      setNotes(notesConvert);
-      return notesConvert
-    }
-    fetchNotes()
-  },[]);
+  // useEffect(() => {
+  //   const fetchNotes = async() => {
+  //     const allNotes = await fetch("/api/allnotes");
+  //     const notesConvert = await allNotes.json();
+  //     setNotes(notesConvert);
+  //     return notesConvert
+  //   }
+  //   fetchNotes()
+  // },[]);
 
 
   return (
     <div className="App">
       <h1>Jot app</h1>
-      <div className="DisplayBox">
+      {/* <div className="DisplayBox">
         <AllNote
         notes={notes}
         />
-      </div>
+      </div> */}
     </div>
   );
 }
