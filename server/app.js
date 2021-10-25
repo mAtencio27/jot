@@ -23,8 +23,8 @@ app.get("/api/hello", async(req,res) => {
 })
 
 app.get("/api/allnotes", async(req,res) => {
-    //const notes = await db.table("notes")
-    res.json("this is an issue with the Db")
+    const notes = await db.table("notes")
+    res.json(notes)
 })
 
 /*************************************************************************** */
