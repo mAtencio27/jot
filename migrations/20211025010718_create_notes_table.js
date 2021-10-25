@@ -1,7 +1,7 @@
 
 exports.up = function(knex) {
     return knex.schema.createTable("notes", (table) => {
-        table.uuid("id").primary();
+        table.increments("id").primary();
         table.text("note");
     });
   
