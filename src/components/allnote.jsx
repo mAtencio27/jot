@@ -3,7 +3,6 @@ import React from "react";
 export default function AllNote(props){
 
     const notes = props.notes
-
     const display = []
 
     for(let note of notes){

@@ -1,5 +1,5 @@
 import './App.css';
-import axios from 'axios'
+//import axios from 'axios'
 import { useEffect, useState } from 'react';
 import AllNote from './components/allnote';
 
@@ -16,10 +16,6 @@ function App() {
     }
     fetchNotes()
   },[]);
-
-  function buttonHandler (e){
-    console.log(notes)
-  }
 
 
   return (
